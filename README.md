@@ -3,8 +3,8 @@ synchrony-debug
 
 Test project for replaying an unexpected behavior on sinatra-synchrony/active-record 
 
-make test database
-==================
+Making test database
+====================
 
 ```
   % mysql -u root -proot
@@ -13,7 +13,7 @@ make test database
   mysql> create table orranges (id int(11) auto_increment, title text, primary key(id));
 ```
 
-run
+Run
 ===
 
 ```
