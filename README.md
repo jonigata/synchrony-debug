@@ -29,4 +29,4 @@ From another terminal: (Try many times)
   % weighttp -n 100 -c 64 http://localhost:9292/
 ```
 
-This stress test sometimes causes errors such as "undefined method 'rollback' for #<ActiveRecord::ConnectionAdapters::ClosedTransaction:0xabcdef89>". These erros are caused by the Fiber unawareness of DatabaseStatements. 
+This stress test sometimes causes errors such as "undefined method 'rollback' for `#<ActiveRecord::ConnectionAdapters::ClosedTransaction:0xabcdef89>`". These erros are caused by the Fiber unawareness of DatabaseStatements. 
