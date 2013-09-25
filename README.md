@@ -18,8 +18,8 @@ Making test database
   mysql> create table orranges (id int(11) auto_increment, title text, primary key(id));
 ```
 
-Run
-===
+Run server
+==========
 
 ```
   % git clone git@github.com:jonigata/synchrony-debug.git
@@ -27,6 +27,9 @@ Run
   % bundle install --path gems
   % bundle exec rackup
 ```
+
+Run stress test
+===============
 
 From another terminal: (Try many times)
 
