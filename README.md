@@ -15,7 +15,7 @@ Making test database
   % mysql -u root -proot
   mysql> create database synchrony;
   mysql> use synchrony
-  mysql> create table orranges (id int(11) auto_increment, title text, primary key(id));
+  mysql> create table oranges (id int(11) auto_increment, title text, primary key(id));
 ```
 
 Run server

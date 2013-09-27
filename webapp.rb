@@ -6,7 +6,7 @@ require "sinatra/activerecord"
 
 SYNCHRONY = true
 
-class Orrange < ActiveRecord::Base; end
+class Orange < ActiveRecord::Base; end
 
 class WebApp < Sinatra::Base
   use Rack::CommonLogger  # sinatra-synchronyを使うとなぜかデフォルトが消える
@@ -24,10 +24,10 @@ class WebApp < Sinatra::Base
   end
 
   get '/' do
-    orrange = Orrange.new
-    orrange.title = 'hello'
+    orange = Orange.new
+    orange.title = 'hello'
     begin
-      orrange.save
+      orange.save
     rescue => e
       open("error.txt", "a") do |file|
         file.puts e
