@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 
-require "sinatra"
-require "sinatra/synchrony"
-require "sinatra/activerecord"
+require 'active_record'
 
-SYNCHRONY = true
 
 class Orange < ActiveRecord::Base; end
 
@@ -15,7 +12,7 @@ class WebApp < Sinatra::Base
 
   configure do
     ActiveRecord::Base::establish_connection(
-      :adapter => SYNCHRONY ? "em_mysql2" : "mysql2",
+      :adapter => "em_mysql2",
       :database => 'synchrony',
       :username => 'root',
       :password => 'root',
@@ -33,8 +30,8 @@ class WebApp < Sinatra::Base
         file.puts e
         # file.puts e.backtrace
         puts e
-        puts e.backtrace
       end
+      raise
     end
 
     'hello world'
